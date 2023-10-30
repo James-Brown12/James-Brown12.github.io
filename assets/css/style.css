@@ -1,0 +1,577 @@
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #272829;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+a {
+  color: #149ddd;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #37b3ed;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #212431;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #2eafec;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  transition: all ease-in-out 0.5s;
+  z-index: 9997;
+  transition: all 0.5s;
+  background: #040b14;
+  overflow-y: auto;
+}
+
+#header .profile img {
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  border: 8px solid #2c2f3f;
+  border-radius: 50%;
+}
+
+#header .profile h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  font-family: "Poppins", sans-serif;
+}
+
+#header .profile h1 a,
+#header .profile h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#header .profile .social-links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#header .profile .social-links a {
+  display: inline-block;
+  background: #212431;
+  color: #fff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  margin-right: 10px;
+  transition: 0.3s;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#header .profile .social-links a:hover {
+  background: #149ddd;
+  color: #fff;
+  text-decoration: none;
+}
+
+#header .profile .social-links a:last-child {
+  margin-right: 0;
+}
+
+
+#main{
+  margin-left: 300px;
+  padding: 10px; /* Add padding inside the box */
+}
+
+@media (max-width: 1199px) {
+  #header {
+    left: -300px;
+  }
+  .mobile-nav-toggle{
+    visibility: visible;
+  }
+
+  #main{
+    margin-left: 0;
+  }
+}
+
+
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu {
+  padding: 30px 0 0 0;
+}
+
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu>ul>li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu a,
+.nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  color: #a8a9b4;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.nav-menu a i,
+.nav-menu a:focus i {
+  font-size: 24px;
+  padding-right: 8px;
+  color: #6f7180;
+}
+
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover>a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover>a i {
+  color: #149ddd;
+}
+
+/* Mobile Navigation */
+
+.mobile-nav-toggle{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 996;
+  background: #212431;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.mobile-nav-toggle i{
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.mobile-nav-toggle:hover {
+  background: #2eafec;
+  color: #fff;
+}
+
+.mobile-nav-active #header {
+  left: 0;
+}
+
+@media (min-width: 1200px) {
+  .mobile-nav-toggle {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 1199px) {
+  .mobile-nav-toggle{
+    visibility: visible;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# home Section
+--------------------------------------------------------------*/
+
+#home {
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  background: url("../img/physics_blackboard.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+
+#home .home-container {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 4vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.typed{
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  #home {
+  width: calc(100% - 300px);
+  margin-left: 300px;
+  transition: all 0.5s ease;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+.section-title {
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #173b6c;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #149ddd;
+  bottom: 0;
+  left: 0;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+.content {
+  background-color: #f2f2f2; 
+  border-radius: 10px; 
+  padding: 20px; 
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a slight shadow effect */
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #173b6c;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.about .content ul strong {
+  margin-right: 10px;
+}
+
+.about .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #149ddd;
+  line-height: 0;
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+.skills .progress {
+  height: 60px;
+  display: block;
+  background: none;
+  border-radius: 0;
+}
+
+.skills .progress .skill {
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+}
+
+.skills .progress .skill .val {
+  float: right;
+  font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+  background: #dce8f8;
+  height: 10px;
+}
+
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: #149ddd;
+}
+
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #050d18;
+}
+
+.resume .resume-title h3{
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #050d18;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #1f5297;
+  position: relative;
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: #e4edf9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #1f5297;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+
+/* Style for the Portfolio Filters */
+.portfolio-filters {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.portfolio-filters li {
+  list-style: none;
+  display: inline;
+  margin-right: 20px;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio-filters li:hover,
+.portfolio-filters li.active {
+  color: #e44d26; /* Active filter color */
+}
+
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* Adjust the gap between portfolio items */
+}
+
+.portfolio-item {
+  position: relative;
+  text-align: center;
+  
+  width: 46%;
+  margin: 10px;
+  display: block;
+  opacity: 1;
+  transition: opacity 0.5s; /* Adjust the duration as needed */
+  
+}
+
+.portfolio-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10%;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  transition: 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.portfolio-overlay h2 {
+  color: #fff;
+  font-size: 24px;
+  margin: 0;
+}
+
+.portfolio-links {
+  display: flex;
+  gap: 30px; /* Adjust the gap as needed */
+  margin-bottom: 20px; /* Optional: Add some spacing between title and links */
+}
+
+.portfolio-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Add hover effects if needed */
+.portfolio-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+  .portfolio-item {
+    width: 100%; /* One item per row on smaller screens */
+  }
+}
